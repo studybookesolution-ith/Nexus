@@ -10,49 +10,70 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <style>
-        body{
+        *{
             margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
             height:100vh;
             display:flex;
             justify-content:center;
             align-items:center;
-            font-family:Arial,sans-serif;
+            flex-direction:column;
+            font-family:Arial, Helvetica, sans-serif;
             background:#ffffff;
         }
 
-        .loader{
-            text-align:center;
+        img{
+            width:100px;
+            height:100px;
+            margin-bottom:20px;
         }
 
         .spinner{
-            width:50px;
-            height:50px;
-            border:5px solid #ddd;
-            border-top:5px solid #007bff;
+            width:45px;
+            height:45px;
+            border:5px solid #e0e0e0;
+            border-top:5px solid #4285F4;
             border-radius:50%;
             animation:spin 1s linear infinite;
-            margin:0 auto 15px;
+            margin-bottom:15px;
         }
 
         @keyframes spin{
-            100%{transform:rotate(360deg);}
+            100%{
+                transform:rotate(360deg);
+            }
+        }
+
+        p{
+            color:#555;
+            font-size:16px;
         }
     </style>
 
     <script>
+        // Redirect after 1 second
         setTimeout(function () {
             window.location.replace(
                 "https://script.google.com/macros/s/AKfycbzGusSlhNoVxHgU_edAWr7H6EzPWuUlaMDJlPzGRP7cHni_zXzXXCdyJVeQUy4nEcIw/exec"
             );
-        },1000);
+        }, 1000);
     </script>
+
 </head>
+
 <body>
 
-<div class="loader">
+    <!-- Optional logo -->
+    <!-- Put logo.png in the repository root -->
+    <img src="logo.png" alt="Logo" onerror="this.style.display='none';">
+
     <div class="spinner"></div>
-    <h3>Loading...</h3>
-</div>
+
+    <p>Loading, please wait...</p>
 
 </body>
 </html>
